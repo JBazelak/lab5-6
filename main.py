@@ -91,3 +91,45 @@ import numpy as np
 # print(c.flat)
 
 #wartosci identyczne
+
+
+#####PANDAS######
+import pandas as pd
+
+#zad 1
+
+xls = pd.ExcelFile('imiona.xlsx')
+df = pd.read_excel(xls)
+# print(df)
+
+###zad 2
+
+#pkt1
+# print(df[df['Liczba'] > 1000])
+
+#pkt2
+# print(df[df['Imie'] == 'JAKUB'])
+
+#pkt3
+# print(sum(df['Liczba']))
+
+#pkt4
+
+#PKT5
+# m = len(df[df['Plec'] == 'M'])
+# print('Urodzonych chlopcow: ', m)
+# k = len(df[df['Plec'] == 'K'])
+# print('Urodzonych dziewczynek: ',k)
+
+#pkt 6
+#pkt 7
+
+###Zad3
+
+data = pd.read_csv('zamowienia.csv',header=0, sep=';',decimal=',')
+print(data)
+
+#pkt 1
+print(data.Sprzedawca.is_unique)
+#pkt 2
+# print(data.sort_values(by='Utarg', ascending=True,  na_position='last').head(5))
